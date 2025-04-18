@@ -2023,7 +2023,73 @@ for (let i = 0; i < totalRoses; i++) {
         </div>
       </div>
     </div>
-    <style>.fixed-footer{display:flex;justify-content:space-around;position:fixed;background:linear-gradient(to bottom,#b3001b 0%,#fbb002 300%,#b3001b 100%);padding:5px 0;box-shadow:0 0 8px 4px #000;left:0;right:0;bottom:0;z-index:99}.fixed-footer a{flex-basis:calc((100% - 15px*6)/ 5);text-decoration:none;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;max-width:75px;font-size:12px;font-family:Ubuntu,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}.fixed-footer a:hover{font-weight:700}.fixed-footer .center{transform:scale(1.5) translateY(-5px);background:center no-repeat;background-size:contain;background-color:inherit;border-radius:50%}.fixed-footer img{max-width:20px;margin-bottom:0;max-height:20px}</style>
+    <style>
+.fixed-footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  background: linear-gradient(to bottom, #b3001b, #fbb002, #b3001b);
+  background-size: 400% 400%;
+  animation: footerGradient 15s ease infinite;
+  padding: 8px 0;
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+@keyframes footerGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fixed-footer a {
+  flex-basis: calc((100% - 15px*6) / 5);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  max-width: 75px;
+  font-size: 12px;
+  font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+.fixed-footer a:hover {
+  font-weight: 700;
+  transform: translateY(-5px) scale(1.1);
+  color: #ffe600;
+  text-shadow: 0 0 6px #fff;
+}
+
+.fixed-footer .center {
+  transform: scale(1.7) translateY(-5px);
+  background: center no-repeat;
+  background-size: contain;
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
+  padding: 5px;
+}
+
+.fixed-footer img {
+  max-width: 24px;
+  max-height: 24px;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+.fixed-footer a:hover img {
+  transform: scale(1.2) rotate(10deg);
+}
+</style>
+
     <div class="fixed-footer">
       <a href="https://mawar500.cc/pecah" rel="nofollow noopener" target="_blank"><img layout="intrinsic" height="20px" width="20px" src="https://image-resource77.cloud/uploads/mawar500/icon-mawar500-gacor.png" alt="PROMO">Bonus</a>
       <a href="https://mawar500.cc/pecah" rel="nofollow noopener" target="_blank"><img layout="intrinsic" height="20px" width="20px" src="https://image-resource77.cloud/uploads/mawar500/icon-mawar500-gacor.png" alt="LOGIN">Login</a>
