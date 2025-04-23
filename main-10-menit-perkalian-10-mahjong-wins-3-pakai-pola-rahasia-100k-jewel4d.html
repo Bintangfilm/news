@@ -1412,7 +1412,7 @@ body {
           <style>.breadcrumb_list{width:1188px;height:48px;border-bottom:1px solid #eff0f5;margin:0 auto;overflow:hidden;text-overflow:ellipsis}.breadcrumb_list_empty{height:0;border:none;overflow:hidden}.breadcrumb_list .breadcrumb{padding-left:0;margin-left:-4px;height:48px;vertical-align:middle;display:inline-block;white-space:nowrap}.breadcrumb_list .breadcrumb .breadcrumb_item{position:relative;display:table-cell;vertical-align:middle;font-size:13px;font-weight:300;height:48px}.breadcrumb_list .breadcrumb .breadcrumb_item .breadcrumb_item_text{vertical-align:middle;padding:0;margin:0;line-height:100%;display:inline-block;font-weight:300}.breadcrumb_list .breadcrumb .breadcrumb_item .breadcrumb_item_text .breadcrumb_item_anchor{display:inline-block;vertical-align:middle;color:#1a9cb7;padding:0 4px;font-size:14px;font-family:Roboto-Regular,Helvetica,Arial,sans-serif;max-width:200px;white-space:nowrap;line-height:16px;overflow:hidden;text-overflow:ellipsis}.breadcrumb_list .breadcrumb .breadcrumb_item .breadcrumb_item_text .breadcrumb_item_anchor_last{color:#757575;max-width:none;height:16px;line-height:16px;white-space:normal}.breadcrumb_list .breadcrumb .breadcrumb_item .breadcrumb_item_text .breadcrumb_right_arrow{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACKUExURUxpcYGBgYGBgYWFhYCAgICAgICAgIKCgv///4GBgZWVlYyMjIGBgYCAgIKCgoGBgYGBgaqqqoODg7+/v4GBgZKSko6OjoGBgYWFhYGBgYSEhIGBgZmZmYCAgIGBgYGBgYCAgICAgIGBgYCAgICAgIiIiICAgIeHh4GBgYSEhIODg4GBgYGBgYCAgPLijmAAAAAtdFJOUwCS7jCDi/E1AbYMFJrrK9ToAycEugcJtBfYG64Fp+S+vb+god0e4SLcHyPgwPJLUkAAAAB6SURBVDjLY2AYYoCdkwu/AgVdHTG8Crj5dUVE8aqQkNQVl8GrQkpDV1oYrwpVbV1ZQbwq1OV0lTnwqhAS0OXBr4KPV5cRf3AwM+myEghRNl0WihQQsoKQIwl5U0tOVwmfvKYa/qCWUsEfWYSim2CCkddVFKMs0Q5aAABM4wlSQJ87yAAAAABJRU5ErkJggg==);background-repeat:no-repeat;background-size:contain;display:inline-block;width:16px;height:16px;vertical-align:middle}</style>
           <style>.baxia-dialog{display:none!important}</style>
           <div data-spm="breadcrumb" id="J_breadcrumb_list" class="breadcrumb_list breadcrumb_custom_cls">
-<!-- Notifikasi Stylish + Swipe + Teks Terang -->
+<!-- Notifikasi Stylish + Swipe + Teks Terang + Suara -->
 <style>
   #J_breadcrumb_list .notif-container {
     font-family: 'Arial', sans-serif;
@@ -1446,23 +1446,28 @@ body {
 </style>
 
 <div class="notif-container" id="notifContainer"></div>
+<audio id="notifSound" preload="auto">
+  <source src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" type="audio/ogg">
+  <source src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.mp3" type="audio/mpeg">
+</audio>
+
 <script>
   const userData = [
-    {name: "Tono P.", amount: 14473070, game: "Fruit Party"},
-    {name: "Yuni W.", amount: 25377000, game: "Mahjong Ways"},
-    {name: "Riko G.", amount: 42635243, game: "5 Lions Megaways"},
-    {name: "Bayu S.", amount: 40230838, game: "Sweet Bonanza"},
-    {name: "Budi W.", amount: 48042353, game: "Fruit Party"},
-    {name: "Rina P.", amount: 19382569, game: "Aztec Gems"},
-    {name: "Rina W.", amount: 45989789, game: "Starlight Princess"},
-    {name: "Yuni M.", amount: 41136594, game: "Mahjong Ways"},
-    {name: "Riko R.", amount: 31223030, game: "Wild West Gold"},
-    {name: "Yuni S.", amount: 25608850, game: "Fruit Party"},
-    {name: "Bayu P.", amount: 37476284, game: "Great Rhino"},
-    {name: "Riko W.", amount: 47032022, game: "5 Lions Megaways"},
-    {name: "Putra S.", amount: 35154871, game: "Starlight Princess"},
-    {name: "Tono W.", amount: 39144029, game: "Starlight Princess"},
-    {name: "Sari R.", amount: 19674301, game: "Sweet Bonanza"},
+    {name: "Andi P.", amount: 19497053, game: "Fruit Party"},
+    {name: "Rina R.", amount: 10347921, game: "Great Rhino"},
+    {name: "Budi S.", amount: 12736914, game: "Starlight Princess"},
+    {name: "Sari W.", amount: 6669121, game: "Mahjong Ways"},
+    {name: "Riko W.", amount: 9780345, game: "Sweet Bonanza"},
+    {name: "Yuni S.", amount: 23888645, game: "Mahjong Ways"},
+    {name: "Budi M.", amount: 6115589, game: "Fruit Party"},
+    {name: "Budi W.", amount: 18057552, game: "Sweet Bonanza"},
+    {name: "Rina W.", amount: 47088497, game: "Aztec Gems"},
+    {name: "Andi M.", amount: 47754547, game: "Gates of Olympus"},
+    {name: "Dewi R.", amount: 25114545, game: "Aztec Gems"},
+    {name: "Tono W.", amount: 35331308, game: "Aztec Gems"},
+    {name: "Dewi R.", amount: 25185699, game: "Great Rhino"},
+    {name: "Tono P.", amount: 24522506, game: "Wild West Gold"},
+    {name: "Putra S.", amount: 7800878, game: "Great Rhino"},
   ];
 
   function tampilNotifMenang() {
@@ -1473,6 +1478,11 @@ body {
     notif.className = "notif";
     notif.innerText = `${data.name} menang Rp ${formattedAmount} di ${data.game}`;
     container.appendChild(notif);
+
+    // Mainkan suara
+    const sound = document.getElementById("notifSound");
+    if (sound) sound.play();
+
     setTimeout(() => notif.remove(), 5000);
   }
 
@@ -1665,13 +1675,13 @@ body {
                 <style>.content h2,.content h3{text-align:center}.content p{text-align:justify}.content li{font-weight:700;list-style-type:decimal;font-size:15px}.cell2{margin-bottom:1em}.cell2 li{font-weight:400;font-size:14px}.content a{font-weight:700;color:#a80000}.content a:hover{color:#002fff}</style>
                 <div class="content">
                     <p style="text-align: justify;">Mahjong, permainan yang berasal dari Tiongkok, telah menjadi fenomena global, terutama di media sosial. Banyak yang terpesona oleh keseruan dan tantangan yang ditawarkan, tetapi tidak semua orang tahu rahasia di balik kemenangan besar. Dalam artikel ini, kita akan mengungkap rahasia heboh Mahjong dan memberikan strategi ampuh untuk mencetak jackpot besar di media sosial. Bersiaplah untuk mengeksplorasi dunia Mahjong yang penuh dengan peluang!</p>
-          <h2>Mengungkap Rahasia Besar di Balik Kemenangan Mahjong</h2>
-          <p>Kemenangan dalam permainan Mahjong tidak hanya bergantung pada keberuntungan, tetapi juga pada pemahaman yang mendalam tentang aturan dan strategi permainan. Banyak pemain yang hanya mengandalkan keberuntungan, namun mereka yang benar-benar memahami cara kerja permainan dapat memanfaatkan setiap kesempatan. Salah satu rahasia besar adalah mengenali pola permainan, baik dari lawan maupun dari kartu yang ada. Dengan memperhatikan setiap langkah dan membuat perhitungan yang tepat, Anda bisa meningkatkan peluang untuk menang.</p>
-          <p>Selain itu, penting bagi pemain untuk menjaga emosi dan fokus selama permainan. Mahjong bisa menjadi permainan yang sangat emosional, terutama ketika menghadapi tekanan dari lawan atau ketika peluang untuk menang di depan mata. Memahami cara mengendalikan diri dan tetap tenang di bawah tekanan dapat menjadi kunci untuk meraih keberhasilan. Emosi yang stabil akan membantu Anda membuat keputusan yang lebih baik dan menghindari kesalahan yang bisa berakibat fatal.</p>
-          <h2>Strategi Ampuh untuk Mencetak Jackpot di Media Sosial</h2>
-          <p>Ketika bermain Mahjong di media sosial, memahami algoritma platform dan cara menarik perhatian audiens menjadi penting. Salah satu strategi ampuh adalah dengan membagikan momen-momen kemenangan Anda secara konsisten. Dengan membagikan pengalaman bermain, tips, atau trik yang ditemukan, Anda tidak hanya meningkatkan interaksi tetapi juga membangun komunitas yang mendukung. Semakin banyak orang yang melihat pencapaian Anda, semakin besar peluang Anda untuk mendapatkan dukungan dan bahkan hadiah dari platform tersebut.</p>
-          <p>Selanjutnya, berkolaborasi dengan pemain lain yang memiliki pengikut banyak juga dapat membuka peluang baru. Melalui kolaborasi, Anda dapat memperluas jangkauan audiens dan menarik perhatian lebih banyak orang terhadap permainan yang Anda mainkan. Ingat, di dunia media sosial, jaringan yang kuat bisa memberikan dampak yang signifikan terhadap keberhasilan Anda. Jadi, jangan ragu untuk menjalin hubungan dengan sesama pemain dan berbagi strategi untuk mendapatkan jackpot besar!</p>
-          <p>Dengan memahami rahasia besar di balik kemenangan Mahjong dan menerapkan strategi yang tepat di media sosial, Anda bisa membuka jalan menuju kesuksesan yang selama ini diimpikan. Permainan ini bukan hanya tentang keberuntungan semata, tetapi juga tentang keterampilan, strategi, dan koneksi yang dibangun di sepanjang perjalanan. Jadi, siapkan diri Anda, terapkan tips yang telah dibagikan, dan raih jackpot besar di dunia Mahjong yang penuh warna ini!</p>
+					<h2>Mengungkap Rahasia Besar di Balik Kemenangan Mahjong</h2>
+					<p>Kemenangan dalam permainan Mahjong tidak hanya bergantung pada keberuntungan, tetapi juga pada pemahaman yang mendalam tentang aturan dan strategi permainan. Banyak pemain yang hanya mengandalkan keberuntungan, namun mereka yang benar-benar memahami cara kerja permainan dapat memanfaatkan setiap kesempatan. Salah satu rahasia besar adalah mengenali pola permainan, baik dari lawan maupun dari kartu yang ada. Dengan memperhatikan setiap langkah dan membuat perhitungan yang tepat, Anda bisa meningkatkan peluang untuk menang.</p>
+					<p>Selain itu, penting bagi pemain untuk menjaga emosi dan fokus selama permainan. Mahjong bisa menjadi permainan yang sangat emosional, terutama ketika menghadapi tekanan dari lawan atau ketika peluang untuk menang di depan mata. Memahami cara mengendalikan diri dan tetap tenang di bawah tekanan dapat menjadi kunci untuk meraih keberhasilan. Emosi yang stabil akan membantu Anda membuat keputusan yang lebih baik dan menghindari kesalahan yang bisa berakibat fatal.</p>
+					<h2>Strategi Ampuh untuk Mencetak Jackpot di Media Sosial</h2>
+					<p>Ketika bermain Mahjong di media sosial, memahami algoritma platform dan cara menarik perhatian audiens menjadi penting. Salah satu strategi ampuh adalah dengan membagikan momen-momen kemenangan Anda secara konsisten. Dengan membagikan pengalaman bermain, tips, atau trik yang ditemukan, Anda tidak hanya meningkatkan interaksi tetapi juga membangun komunitas yang mendukung. Semakin banyak orang yang melihat pencapaian Anda, semakin besar peluang Anda untuk mendapatkan dukungan dan bahkan hadiah dari platform tersebut.</p>
+					<p>Selanjutnya, berkolaborasi dengan pemain lain yang memiliki pengikut banyak juga dapat membuka peluang baru. Melalui kolaborasi, Anda dapat memperluas jangkauan audiens dan menarik perhatian lebih banyak orang terhadap permainan yang Anda mainkan. Ingat, di dunia media sosial, jaringan yang kuat bisa memberikan dampak yang signifikan terhadap keberhasilan Anda. Jadi, jangan ragu untuk menjalin hubungan dengan sesama pemain dan berbagi strategi untuk mendapatkan jackpot besar!</p>
+					<p>Dengan memahami rahasia besar di balik kemenangan Mahjong dan menerapkan strategi yang tepat di media sosial, Anda bisa membuka jalan menuju kesuksesan yang selama ini diimpikan. Permainan ini bukan hanya tentang keberuntungan semata, tetapi juga tentang keterampilan, strategi, dan koneksi yang dibangun di sepanjang perjalanan. Jadi, siapkan diri Anda, terapkan tips yang telah dibagikan, dan raih jackpot besar di dunia Mahjong yang penuh warna ini!</p>
           
                 <div id="block-O-HF3LN4YVI" class="pdp-block pdp-block__delivery-seller">
                   <div id="module_seller_delivery" class="pdp-block module"><div data-spm="delivery_options" data-nosnippet="true"></div></div>
